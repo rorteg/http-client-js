@@ -1,0 +1,50 @@
+{
+  "name": "httpClient",
+  "version": "1.0.0",
+  "description": "Simple HTTP client lib",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src",
+    "start:watch": "nodemon src",
+    "test": "jest test --collectCoverage --ci",
+    "test:watch": "jest test --watchAll --notify",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prerelease": "npm run lint && npm test",
+    "release:patch": "npm run prerelease && changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push --follow-tags",
+    "release:minor": "npm run prerelease && changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push --follow-tags",
+    "release:major": "npm run prerelease && changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "PACKAGE-REPOSITORY"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "generate-changelog": "^1.6.0",
+    "jest": "^21.2.1",
+    "nodemon": "^1.12.1",
+    "prettier": "^1.9.2",
+    "sinon": "^4.1.2"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test/**/*.js"
+    ],
+    "collectCoverageFrom": [
+      "**/src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50
+      }
+    }
+  }
+}

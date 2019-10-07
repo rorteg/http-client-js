@@ -1,0 +1,39 @@
+{
+    "extends": ["eslint:recommended", "prettier"],
+
+    "plugins": ["prettier"],
+
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+
+    "globals": {
+        "describe": false,
+        "it": false,
+        "before": false,
+        "beforeEach": false,
+        "after": false
+    },
+
+    "rules": {
+        "prettier/prettier": [
+            "error", { "singleQuote": true, "tabWidth": 4 }
+        ],
+        "no-console": "off",
+        "max-len": ["error", 120],
+        "padded-blocks": "off",
+        "no-use-before-define": ["error", "nofunc"],
+        "comma-dangle": ["error", "never"],
+        // Code quality
+        "complexity": ["error", 5],
+        "max-params": ["error", 3],
+        "max-statements": ["error", 10],
+        "indent": ["error", 4]
+    }
+}
