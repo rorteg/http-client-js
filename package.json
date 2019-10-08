@@ -1,6 +1,6 @@
 {
   "name": "@madeiramadeira/http-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple HTTP client lib",
   "main": "src/index.js",
   "scripts": {
