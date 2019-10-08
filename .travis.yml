@@ -1,0 +1,13 @@
+services:
+  - xvfb
+language: node_js
+node_js:
+  - node
+email:
+  on_failure: change
+  on_success: never
+after_success:
+- npm run coveralls
+  env:
+    global:
+      - secure: dSULxk2hDwgoBu03fsBRHsUChl0nIW3aZmwrU

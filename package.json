@@ -1,12 +1,13 @@
 {
-  "name": "httpClient",
+  "name": "http-client-js",
   "version": "1.0.0",
   "description": "Simple HTTP client lib",
   "main": "index.js",
   "scripts": {
     "start": "node src",
     "start:watch": "nodemon src",
-    "test": "jest test --collectCoverage --ci",
+    "test": "jest test --collectCoverage --ci --coverage",
+    "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:watch": "jest test --watchAll --notify",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -23,6 +24,7 @@
   "license": "",
   "devDependencies": {
     "chai": "^4.1.2",
+    "coveralls": "^3.0.6",
     "eslint": "^5.14.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-jest": "^22.17.0",
