@@ -77,6 +77,10 @@ module.exports = class httpClient {
         }
 
         return new Promise((resolve, reject) => {
+            if (typeof XMLHttpRequest === 'undefined') {
+                const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+            }
+
             const req = new XMLHttpRequest();
             req.open(optionObj.method, url, true);
             //req.setRequestHeader('Content-type', 'application/json; charset=utf-8');
