@@ -72,6 +72,6 @@ describe('httpClient: ', () => {
         const client = new httpClient(true);
 
         const promise = await client.delete(API);
-        expect(promise.status).toBe(200);
+        expect(promise.status).toEqual(200);
     });
 });
