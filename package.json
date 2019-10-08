@@ -1,5 +1,5 @@
 {
-  "name": "@madeiramadeira/http-client-js",
+  "name": "@madeiramadeira/http-client",
   "version": "1.0.0",
   "description": "Simple HTTP client lib",
   "main": "index.js",
@@ -21,7 +21,7 @@
     "url": "PACKAGE-REPOSITORY"
   },
   "author": "",
-  "license": "",
+  "license": "ISC",
   "devDependencies": {
     "chai": "^4.1.2",
     "coveralls": "^3.0.6",
@@ -49,5 +49,9 @@
         "lines": 50
       }
     }
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {}
 }
