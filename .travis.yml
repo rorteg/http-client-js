@@ -8,6 +8,6 @@ email:
   on_success: never
 after_success:
 - npm run coveralls
-  env:
-    global:
-      - secure: dSULxk2hDwgoBu03fsBRHsUChl0nIW3aZmwrU
+env:
+  global:
+    - secure: dSULxk2hDwgoBu03fsBRHsUChl0nIW3aZmwrU
